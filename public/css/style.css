@@ -1,0 +1,39 @@
+/* @font-face {
+    font-family: "Dayrom";
+    src:url("../fonts/dayrom.ttf");
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+} */
+
+/* body{
+  font-family: Dayrom;
+} */
+.navbar-header img {
+    height: 49px;
+    width:66px;
+    width: auto;
+    position:relative;
+    margin-top:-15px;
+}
+
+.row{
+  width:100% !important;
+}
+
+.col-md-6{
+  width: 60%;
+  margin: auto !important;
+}
+
+h2{
+  text-align: center;
+}
+
+.submit,.link{
+  display: inline-block;
+  width: 49%;
+}

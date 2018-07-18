@@ -1,0 +1,16 @@
+#Verification si le mod rewrite est active,bien par defaut,dans wamp,et meme plusieurs hebergeurs l'on active par defaut
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+
+  #C'est notre url  racine dans ce dossier
+  RewriteBase /shareposts/public
+
+  #Ces deux code qui suivent voir si le fichier recherche existe,sinon le RewriteRule est applique
+  #Donc,ca redirige la requete vers index
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+
+  #Ceci nous permet au lieu d'ecrire "url?post=1" on peut ecrire : "url/post/1"
+  RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
